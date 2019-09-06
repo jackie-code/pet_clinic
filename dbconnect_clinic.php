@@ -1,4 +1,4 @@
-// connect to the database
+
 <?php
 $user = "root";
 $password = "root";

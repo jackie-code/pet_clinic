@@ -2,13 +2,11 @@
 include "header_nav.php";
 include "dbconnect_clinic.php";
 // WHERE 1 simply means true. if it were WHERE 0, it would mean false
-$sql = "SELECT * FROM medications WHERE 1"; 
+$sql = "SELECT * FROM medications WHERE 1";
 $meds = $db->query($sql);
-// "Fetch every row in the $meds result into the $med variable.For every row, print the $med values and a '<br>'
-while ($med = $meds ->fetch(PDO::FETCH_ASSOC)) {
-  print_r($med);
-  echo "<br>";
-}
+// "Fetch every row in the $meds result into the $med variable.For every row, print the $med values and a '<br>' FETCH_ASSOC stands for associative array
+
+
 ?>
 
 
@@ -20,32 +18,23 @@ while ($med = $meds ->fetch(PDO::FETCH_ASSOC)) {
 <main>
   <div class="container-fluid">
     <div class="row">
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/enro.png" class="card-img-top" alt="Ernofloxacin medication">
+      <?php
+      while ($med = $meds->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+         <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
+        <img src="flash_images/<?= $med['image'] ?>" class="card-img-top" alt="Amoxicillin medication">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/amox.png" class="card-img-top" alt="Amoxicillin medication">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/heart_guard.jpg" class="card-img-top" alt="Heart Guard medication">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/frontline_plus.jpg" class="card-img-top" alt="Frontline Plus medication">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      <?php
+      }
+      ?>
+
+
+
+     
+    
 </main>
 
 
