@@ -1,6 +1,6 @@
 // connect to the database
 <?php
-$user = "jackie";
+$user = "root";
 $password = "root";
 $database = "clinic";
 

@@ -1,5 +1,14 @@
 <?php
-include "header_nav.php"
+include "header_nav.php";
+include "dbconnect_clinic.php";
+// WHERE 1 simply means true. if it were WHERE 0, it would mean false
+$sql = "SELECT * FROM medications WHERE 1"; 
+$meds = $db->query($sql);
+// "Fetch every row in the $meds result into the $med variable.For every row, print the $med values and a '<br>'
+while ($med = $meds ->fetch(PDO::FETCH_ASSOC)) {
+  print_r($med);
+  echo "<br>";
+}
 ?>
 
 
