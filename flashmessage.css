@@ -1,0 +1,106 @@
+ * {
+            border: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            transform: scale(1.5);
+        }
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            padding-top: 0px;
+            height: 100px;
+        }
+
+        header div {
+            border: solid 1px white;
+        }
+        header #headdiv {
+            border: none;
+            font-size: 30px;
+            
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .one {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(flash_images/puppiesinarow.jpg);
+            color: white;
+        }
+        .one p {
+            font-size: 5rem;
+        }
+        #left {
+            background-color: black;
+            color: white;
+        }
+
+        #mid {
+            border: 3px solid red;
+            font-size: 20px;
+        }
+
+        #right {
+            background-color: black;
+            color: white;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        p {
+            padding: 10%;
+        }
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+        }
+        #left {
+            padding: 8%;
+        }
+        #right {
+         padding: 8%;   
+        }
+        .l {
+            background-color: lightgray;
+            padding: 20px;
+        }
+        .t {
+            background-color: darkgray;
+            padding: 20px;
+        }
+        .t:hover {
+            transform: scale(1.5);
+            display: block;
+            color: green;
+        }
+        #flashMessage {
+            color:white;
+            border: 3px solid red;
+            background-color: blue;
+            height: 50px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        #meds {
+            border: 3px solid blueviolet;
+        }
