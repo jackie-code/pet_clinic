@@ -10,7 +10,7 @@
             transform: scale(1.5);
         }
         header {
-            background-color: black;
+            background-image: url("flash_images/leopard.jpg");
             color: white;
             display: flex;
             justify-content: space-between;
@@ -35,6 +35,11 @@
             display: flex;
             justify-content: space-around;
             padding: 10px;
+            border: 3px solid black;
+        }
+        nav a {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-decoration: none;
         }
 
         .one {
@@ -42,6 +47,7 @@
             background-size: cover;
             background-image: url(flash_images/puppiesinarow.jpg);
             color: white;
+            border-bottom: 10px solid black;
         }
         .one p {
             font-size: 5rem;
@@ -82,16 +88,19 @@
         .l {
             background-color: lightgray;
             padding: 20px;
+            border: 3px solid black;
         }
         .t {
-            background-color: darkgray;
+            background-color: white;
             padding: 20px;
+            border: 3px solid black;
         }
         .t:hover {
             transform: scale(1.5);
             display: block;
             color: green;
         }
+
         #flashMessage {
             color:white;
             border: 3px solid red;
@@ -104,3 +113,5 @@
         #meds {
             border: 3px solid blueviolet;
         }
+
+       

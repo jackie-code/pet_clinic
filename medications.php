@@ -1,3 +1,9 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="med_toy_food.css">
+</head>
+
+
+
 <?php
 include "header_nav.php";
 include "dbconnect_clinic.php";
@@ -21,20 +27,21 @@ $meds = $db->query($sql);
       <?php
       while ($med = $meds->fetch(PDO::FETCH_ASSOC)) {
         ?>
-         <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/<?= $med['image'] ?>" class="card-img-top" alt="Amoxicillin medication">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="flash_images/<?= $med['image'] ?>" class="card-img-top" alt="pet medication">
+          <div class="card-body">
+            <p class="card-text"><?= $med['description'] ?></p>
+          </div>
         </div>
-      </div>
       <?php
       }
       ?>
 
+    </div>
+  </div>
 
 
-     
-    
+
 </main>
 
 

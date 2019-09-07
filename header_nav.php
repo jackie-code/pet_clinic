@@ -13,12 +13,9 @@
         <div class="l">
             <img src="flash_images/logo-vet.png" alt="vet logo">
         </div>
-        <div id="headdiv"><p>Animal Friends</p></div>
+        <div id="headdiv"></div>
         <div class="t" >
-            <a href="#">Contact Us</a>
-            <p>
-            <a href="mailto:name@email.com">Email</a>
-        </p>
+        <a href="#"><img src="flash_images/cart.jpg" alt="shopping cart"></a>
         </div>
     </header>
    
@@ -28,7 +25,7 @@
         <a href="food.php">Food</a>
         <a href="toys.php">Toys</a>
         <a href="appointment.php">Make an appointment</a>
-        <a href="#"><img src="flash_images/cart.jpg" alt="shopping cart"></a>
+        
 
     </nav>
     <div id="flashMessage">20% off on all vaccines for all of September - December</div>

@@ -1,0 +1,12 @@
+.card {
+    margin-top: 100px;
+}
+
+.card-body p {
+    background-color: rgb(204, 205, 207);
+    border: 2px solid black;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}

@@ -1,5 +1,12 @@
+<head>
+<link rel="stylesheet" type="text/css" href="med_toy_food.css">
+</head>
+
 <?php
-include "header_nav.php"
+include "header_nav.php";
+include "dbconnect_clinic.php";
+$sql = "SELECT * FROM food WHERE 1";
+$foods = $db->query($sql); 
 ?>
 
 
@@ -11,30 +18,21 @@ include "header_nav.php"
 <main>
   <div class="container-fluid">
     <div class="row">
+        <?php
+          while ($food = $foods->fetch(PDO:: FETCH_ASSOC)) {
+            ?>
+
       <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/iams.jpg" class="card-img-top" alt="Iams brand pet food">
+        <img src="flash_images/<?= $food['image'] ?>" class="card-img-top" alt="pet food">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text"><?= $food{'description'} ?></p>
         </div>
       </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/natures_recipe.jpg" class="card-img-top" alt="Nature's Recipe brand pet food">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/pedigree.jpg" class="card-img-top" alt="Pedigree brand pet food">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card col col-12 col-sm-6 col-md-4 col-lg-3">
-        <img src="flash_images/kirkland.jpg" class="card-img-top" alt="Kirkland brand pet food">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
+      <?php
+          }
+      ?>
+
+     
     </div>
   </div>
 </main>
