@@ -4,3 +4,4 @@
 <a href="mailto:name@sampleemail.com"><img src="flash_images/mail.png" alt="email"></a>
 </footer>
 
+
